@@ -9,13 +9,24 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onCommand:africode.transalateSelectedText"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "africode.helloWorld",
-        "title": "Hello World"
+        "command": "africode.translateSelectedText",
+        "title": "Africode: Translate Selected Text"
+      }
+    ]
+  },
+  "menus": {
+    "editor/context": [
+      {
+        "command": "africode.translateSelectedText",
+        "when": "editorHasSelection",
+        "group": "navigation"
       }
     ]
   },
